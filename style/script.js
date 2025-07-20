@@ -3,38 +3,32 @@ const ctx = canvas.getContext('2d');
 const stars = [];
 const explosions = [];
 const shootingStars = [];
-let fontSize, lineHeight;
-
-function updateFontSize() {
-  const minDim = Math.min(window.innerWidth, window.innerHeight);
-  fontSize = Math.max(32, Math.floor(minDim / 12));
-  lineHeight = Math.floor(fontSize * 1.2);
-}
-updateFontSize();
-window.addEventListener('resize', updateFontSize);
-
 const fullTextList = [
   ["DEAR HÀ NGÂN"],
-   [
-    "Chúc mừng sinh nhật Đào Hà Ngân",
-    "Mong tuổi mới mang đến cho Ngân",
-    "nhiều niềm vui, sức khỏe, hạnh phúc",
-    "và thành công trong mọi dự định."
+  [
+    "Chúc mừng sinh nhật Đào Hà Ngân!",
+    "Mong tuổi mới mang đến cho ",
+    "Ngân nhiều niềm vui, sức khỏe,",
+    " hạnh phúc và thành công trong",
+    "mọi dự định."
   ],
   [
     "Cảm ơn Ngân đã luôn là động lực,",
-    "là niềm vui và người bạn tuyệt vời.",
+    "niềm vui và người bạn tuyệt vời.",
     "Hãy luôn rạng rỡ, tự tin và ",
     "giữ vững ước mơ của mình nhé!"
   ],
   [
-    "Chúc Ngân một ngày sinh nhật ý nghĩa,",
-    "tràn ngập tiếng cười, khoảnh khắc đẹp",
-    "bên gia đình và bạn bè."
+    "Chúc Ngân một ngày sinh nhật ",
+    "ý nghĩa, tràn ngập tiếng cười,",
+    "khoảnh khắc đẹp bên ",
+    "gia đình và bạn bè."
   ],
   ["Người gửi: Nguyễn Công Thịnh"],
 ];
+const fontSize =100;
 const fontFamily = "Arial";
+const lineHeight = 120;
 const bearX = 70;
 let bearY = canvas.height - 80;
 let dots = [];
