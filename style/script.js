@@ -15,24 +15,24 @@ window.addEventListener('resize', updateFontSize);
 
 const fullTextList = [
   ["DEAR HÀ NGÂN"],
-  // [
-  //   "Chúc mừng sinh nhật Đào Hà Ngân!",
-  //   "Mong tuổi mới mang đến cho Ngân",
-  //   "nhiều niềm vui, sức khỏe, hạnh phúc",
-  //   "và thành công trong mọi dự định."
-  // ],
-  // [
-  //   "Cảm ơn Ngân đã luôn là động lực,",
-  //   "là niềm vui và người bạn tuyệt vời.",
-  //   "Hãy luôn rạng rỡ, tự tin và ",
-  //   "giữ vững ước mơ của mình nhé!"
-  // ],
-  // [
-  //   "Chúc Ngân một ngày sinh nhật ý nghĩa,",
-  //   "tràn ngập tiếng cười, khoảnh khắc đẹp",
-  //   "bên gia đình và bạn bè."
-  // ],
-  // ["Người gửi: Nguyễn Công Thịnh"],
+   [
+    "Chúc mừng sinh nhật Đào Hà Ngân",
+    "Mong tuổi mới mang đến cho Ngân",
+    "nhiều niềm vui, sức khỏe, hạnh phúc",
+    "và thành công trong mọi dự định."
+  ],
+  [
+    "Cảm ơn Ngân đã luôn là động lực,",
+    "là niềm vui và người bạn tuyệt vời.",
+    "Hãy luôn rạng rỡ, tự tin và ",
+    "giữ vững ước mơ của mình nhé!"
+  ],
+  [
+    "Chúc Ngân một ngày sinh nhật ý nghĩa,",
+    "tràn ngập tiếng cười, khoảnh khắc đẹp",
+    "bên gia đình và bạn bè."
+  ],
+  ["Người gửi: Nguyễn Công Thịnh"],
 ];
 const fontFamily = "Arial";
 const bearX = 70;
