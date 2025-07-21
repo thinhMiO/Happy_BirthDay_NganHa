@@ -29,6 +29,25 @@ controls.zoomSpeed = 0.3;
 controls.rotateSpeed = 0.3;
 controls.update();
 
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('passwordBtn');
+  const input = document.getElementById('passwordInput');
+  const error = document.getElementById('passwordError');
+  btn.onclick = function() {
+    if (input.value === CORRECT_PASSWORD) {
+      showMainContent();
+    } else {
+      error.textContent = "Mật khẩu không đúng!";
+      input.value = "";
+      input.focus();
+    }
+  };
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') btn.onclick();
+  });
+});
 // ---- HÀM TIỆN ÍCH TẠO HIỆU ỨNG GLOW ----
 function createGlowMaterial(color, size = 128, opacity = 0.55) {
   const canvas = document.createElement('canvas');

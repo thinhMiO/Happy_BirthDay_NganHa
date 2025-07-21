@@ -26,7 +26,7 @@ const fullTextList = [
   ],
   ["Người gửi: Nguyễn Công Thịnh"],
 ];
-const fontSize =100;
+const fontSize = 100;
 const fontFamily = "Arial";
 const lineHeight = 120;
 const bearX = 70;
@@ -37,6 +37,19 @@ let currentCharIndex = 0;
 let animationDone = false;
 let currentTextIndex = 0;
 let showGiftBox = false;
+
+// Khởi động hiệu ứng ngay khi trang load xong
+window.addEventListener('DOMContentLoaded', function() {
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    if (window._shootDotInterval) clearInterval(window._shootDotInterval);
+    if (window._shootStarInterval) clearInterval(window._shootStarInterval);
+    window._shootDotInterval = setInterval(shootDot, 5);
+    window._shootStarInterval = setInterval(createShootingStar, 1500);
+    animate();
+});
+
+// === Từ đây trở đi là code hiệu ứng như cũ ===
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -81,9 +94,6 @@ function resizeCanvas() {
   animationDone = false;
   generateAllTargetDots();
 }
-
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
 
 function createExplosion(x, y) {
   const count = 20;
@@ -358,7 +368,7 @@ canvas.addEventListener("click", (e) => {
       e.clientY >= boxY &&
       e.clientY <= boxY + boxH
     ) {
-      window.location.href = "home.html "; // Đổi sang link bạn muốn
+      window.location.href = "home.html"; // Đổi sang link bạn muốn
     }
   }
 });
@@ -384,7 +394,3 @@ canvas.addEventListener("touchstart", (e) => {
     }
   }
 });
-
-setInterval(shootDot, 5);
-setInterval(createShootingStar, 1500);
-animate();
